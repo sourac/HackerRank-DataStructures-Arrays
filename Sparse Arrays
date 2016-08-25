@@ -1,0 +1,50 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Solution sol=new Solution();
+        Scanner sc=new Scanner(System.in);
+        int numberOfString=sc.nextInt();
+        sc.nextLine();
+        String[] str=new String[numberOfString];
+        int i;
+        for(i=0;i<numberOfString;i++){
+            str[i]=sc.nextLine();
+        }
+        
+        int numberOfQuery=sc.nextInt();
+        sc.nextLine();
+        String[] toBeQueried=new String[numberOfQuery];
+        int j;
+        for(j=0;j<toBeQueried.length;j++){
+            toBeQueried[j]=sc.nextLine();
+        }
+          
+        sol.compareTheArray(str,toBeQueried);
+        
+    }
+    
+    
+    	private  void compareTheArray(String[] str, String[] s) {
+	
+		
+		for(int i=0;i<s.length;i++){
+			int count=0;
+			for(int j=0;j<str.length;j++){
+				if(s[i].equals(str[j]))
+					count++;
+			}
+			System.out.println(count);
+		}
+	
+		
+	}
+    
+    
+     
+}
